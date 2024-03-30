@@ -1,12 +1,58 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../icons/LinkedIn.astro"
+import GitHubIcon from "../icons/GitHub.astro"
+import MailIcon from "../icons/Mail.astro"
+import Social from "../components/Social.astro"
+import Experience from "../components/Experience.astro"
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link
+  href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap'
+  rel='stylesheet'
+/>
 
-<Layout  title="Jimmy Bustillo">
-	<Header />
+
+<Layout
+  title='Portafolio de Jimmy Bustillo - Desarrollador y Programador Web'
+  description='Contrata a Jimmy Bustillo para crear aplicaciones web. Desarrolador Web. Especializado en crear aplicaciones únicas.'
+>
+  <main>
+    <section class='w-full lg:w-[740px] mx-auto py-20'>
+      <h1 class='text-white text-5xl font-bold flex flex-row gap-x-4 pb-10'>
+        Hey, soy Jimmy <a
+          href='https://www.linkedin.com/in/jimmy-bustillo/'
+          target='_blank'
+          rel='noopener'
+          class='flex justify-center items-center'
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class='text-2xl opacity-80 text-wrap'>
+        Desarrollador Web. De Cortés, Honduras 🇭🇳. Especializado en crear
+        interfaces y aplicaciones únicas.
+      </h2>
+
+      <nav class='flex gap-x-2 mt-8'>
+        <Social href='https://linkedin.com/in/jimmy-bustillo'>
+          <LinkedInIcon class='size-6' />
+          LinkedIn
+        </Social>
+        <Social href='https://github.com/jimmy-bustillo'>
+          <GitHubIcon class='size-6' />GitHub
+        </Social>
+        <Social>
+          <MailIcon class='size-6' />jimmy.bustillo@outlook.com
+        </Social>
+      </nav>
+    </section>
+
+    <section class="w-full lg:w-[740px] mx-auto flex flex-col justify-center gap-4">
+      <Experience />
+    </section>
+  </main>
 </Layout>
